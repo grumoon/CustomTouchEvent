@@ -31,6 +31,11 @@ public class CustomLayout3 extends RelativeLayout {
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		EventUtil.logEventInfo(TAG + "-->onInterceptTouchEvent", ev);
+
+		if (ev.getAction() == MotionEvent.ACTION_MOVE) {
+			return true;
+		}
+
 		return super.onInterceptTouchEvent(ev);
 	}
 
