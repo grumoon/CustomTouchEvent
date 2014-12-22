@@ -4,16 +4,31 @@
     android:layout_height="match_parent"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <com.grumoon.customtouchevent.ui.CustomLayout
+    <com.grumoon.customtouchevent.ui.CustomLayout1
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="#334455" >
+        android:layout_centerInParent="true"
+        android:background="#112233" >
 
-        <com.grumoon.customtouchevent.ui.CustomView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+        <com.grumoon.customtouchevent.ui.CustomLayout2
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_centerInParent="true"
-            android:background="#554433" />
-    </com.grumoon.customtouchevent.ui.CustomLayout>
+            android:background="#223344" >
+
+            <com.grumoon.customtouchevent.ui.CustomLayout3
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:background="#334455" >
+
+                <com.grumoon.customtouchevent.ui.CustomView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:background="#445566" />
+            </com.grumoon.customtouchevent.ui.CustomLayout3>
+        </com.grumoon.customtouchevent.ui.CustomLayout2>
+    </com.grumoon.customtouchevent.ui.CustomLayout1>
 
 </RelativeLayout>

@@ -7,18 +7,25 @@ import android.widget.RelativeLayout;
 
 import com.grumoon.customtouchevent.util.EventUtil;
 
-public class CustomLayout extends RelativeLayout {
+public class CustomLayout3 extends RelativeLayout {
 
-	private static final String TAG = CustomLayout.class.getSimpleName();
+	private static final String TAG = CustomLayout3.class.getSimpleName();
 
-	public CustomLayout(Context context) {
+	public CustomLayout3(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
 	}
 
-	public CustomLayout(Context context, AttributeSet attrs) {
+	public CustomLayout3(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent event) {
+		EventUtil.logEventInfo(TAG + "-->dispatchTouchEvent", event);
+
+		return super.dispatchTouchEvent(event);
 	}
 
 	@Override

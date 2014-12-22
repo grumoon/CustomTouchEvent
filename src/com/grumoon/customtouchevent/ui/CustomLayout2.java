@@ -3,25 +3,20 @@ package com.grumoon.customtouchevent.ui;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.grumoon.customtouchevent.util.EventUtil;
 
-public class CustomView extends View {
+public class CustomLayout2 extends RelativeLayout {
 
-	private static final String TAG = CustomView.class.getSimpleName();
+	private static final String TAG = CustomLayout2.class.getSimpleName();
 
-	public CustomView(Context context) {
+	public CustomLayout2(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
 	}
 
-	public CustomView(Context context, AttributeSet attrs, int defStyleAttr) {
-		super(context, attrs, defStyleAttr);
-		// TODO Auto-generated constructor stub
-	}
-
-	public CustomView(Context context, AttributeSet attrs) {
+	public CustomLayout2(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 	}
@@ -34,13 +29,15 @@ public class CustomView extends View {
 	}
 
 	@Override
+	public boolean onInterceptTouchEvent(MotionEvent ev) {
+		EventUtil.logEventInfo(TAG + "-->onInterceptTouchEvent", ev);
+		return super.onInterceptTouchEvent(ev);
+	}
+
+	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-
 		EventUtil.logEventInfo(TAG + "-->onTouchEvent", event);
-
-		return true;
-
-		//return super.onTouchEvent(event);
+		return super.onTouchEvent(event);
 	}
 
 }

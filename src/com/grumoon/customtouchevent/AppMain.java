@@ -17,6 +17,13 @@ public class AppMain extends Activity {
 	}
 
 	@Override
+	public boolean dispatchTouchEvent(MotionEvent event) {
+		EventUtil.logEventInfo(TAG + "-->dispatchTouchEvent", event);
+
+		return super.dispatchTouchEvent(event);
+	}
+
+	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		EventUtil.logEventInfo(TAG + "-->onTouchEvent", event);
 
